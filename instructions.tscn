@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf4n6e2mtjerw"]
+
+[ext_resource type="Script" path="res://instructions.gd" id="1_bfwsp"]
+[ext_resource type="AudioStream" uid="uid://dx3c88e5jqunw" path="res://backgroundMusicMenu.mp3" id="2_bwr4b"]
+
+[node name="instructions" type="Node2D"]
+script = ExtResource("1_bfwsp")
+
+[node name="TileBackground" type="ColorRect" parent="."]
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 2068.0
+offset_bottom = 1400.0
+color = Color(0.960784, 0.760784, 0.905882, 1)
+
+[node name="textBox" type="RichTextLabel" parent="."]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+offset_left = -18.0
+offset_top = -5.0
+offset_right = 2024.0
+offset_bottom = 1333.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "You got 6 tries to guess a random five letter word. Green letters are in the
+right spot. Yellow letters are in the word, but in the wrong spot. Black letters are wrong and not in the word. Good Luck...
+"
+fit_content = true
+scroll_active = false
+
+[node name="playNow" type="Button" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 156.0
+offset_top = 1000.0
+offset_right = 1820.0
+offset_bottom = 1161.0
+theme_override_font_sizes/font_size = 100
+text = "Alright! Lets play!"
+
+[node name="nuh" type="Button" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 156.0
+offset_top = 817.0
+offset_right = 1820.0
+offset_bottom = 978.0
+theme_override_font_sizes/font_size = 100
+text = "Never mind, Im not gonna play"
+
+[node name="backgroundMusicMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_bwr4b")
+volume_db = 2.667
+
+[connection signal="button_down" from="playNow" to="." method="_on_play_now_button_down"]
+[connection signal="button_up" from="nuh" to="." method="_on_nuh_button_up"]
+[connection signal="finished" from="backgroundMusicMenu" to="." method="_on_background_music_menu_finished"]

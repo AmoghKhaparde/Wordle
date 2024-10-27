@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://sq8ax8nhs14a"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_27wvk"]
+[ext_resource type="AudioStream" uid="uid://dx3c88e5jqunw" path="res://backgroundMusicMenu.mp3" id="2_p6t8j"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_27wvk")
+
+[node name="background" type="ColorRect" parent="."]
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 2068.0
+offset_bottom = 1400.0
+color = Color(0.960784, 0.760784, 0.905882, 1)
+
+[node name="textBox" type="RichTextLabel" parent="."]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 39.0
+offset_top = 24.0
+offset_right = 2729.0
+offset_bottom = 330.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 115
+bbcode_enabled = true
+text = "AMOGH AND ANUGRAH'S WORDLE"
+
+[node name="letsPlay" type="Button" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 322.0
+offset_top = 904.0
+offset_right = 1677.0
+offset_bottom = 1185.0
+theme_override_font_sizes/font_size = 100
+text = "Lets play!!"
+
+[node name="nah" type="Button" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 322.0
+offset_top = 569.0
+offset_right = 1677.0
+offset_bottom = 850.0
+theme_override_font_sizes/font_size = 100
+text = "I'm not gonna play"
+
+[node name="instruct" type="Button" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 322.0
+offset_top = 253.0
+offset_right = 1679.0
+offset_bottom = 534.0
+theme_override_font_sizes/font_size = 100
+text = "Instructions"
+
+[node name="backgroundMusicMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_p6t8j")
+volume_db = 2.667
+
+[connection signal="button_up" from="letsPlay" to="." method="_on_lets_play_button_up"]
+[connection signal="button_down" from="nah" to="." method="_on_nah_button_down"]
+[connection signal="button_down" from="instruct" to="." method="_on_instruct_button_down"]
+[connection signal="finished" from="backgroundMusicMenu" to="." method="_on_background_music_menu_finished"]

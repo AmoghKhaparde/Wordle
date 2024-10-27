@@ -1,0 +1,350 @@
+[gd_scene load_steps=8 format=3 uid="uid://chqlmimsdn2vn"]
+
+[ext_resource type="PackedScene" uid="uid://btbvoq47sm6tc" path="res://tile.tscn" id="1_8y4m8"]
+[ext_resource type="Script" path="res://main.gd" id="1_c6l8r"]
+[ext_resource type="PackedScene" uid="uid://cu4stjje4ve56" path="res://letter_box.tscn" id="3_7yuvy"]
+[ext_resource type="AudioStream" uid="uid://cg7fj4jpuvybs" path="res://backgroundMusic.mp3" id="4_4w5ob"]
+[ext_resource type="AudioStream" uid="uid://crgvi4gy561xm" path="res://winMusic.mp3" id="4_drlyd"]
+[ext_resource type="AudioStream" uid="uid://b1c8o8mfnj47l" path="res://loseMusic.mp3" id="5_dijkp"]
+[ext_resource type="AudioStream" uid="uid://cn3vnbdxm4vnk" path="res://wrong.mp3" id="7_2ft0r"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_c6l8r")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1000.0
+offset_bottom = 1000.0
+color = Color(0.796078, 0.65098, 0.968627, 1)
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+
+[node name="Line1" type="Node2D" parent="."]
+
+[node name="Tile" parent="Line1" instance=ExtResource("1_8y4m8")]
+
+[node name="Tile2" parent="Line1" instance=ExtResource("1_8y4m8")]
+position = Vector2(200, 0)
+
+[node name="Tile3" parent="Line1" instance=ExtResource("1_8y4m8")]
+position = Vector2(400, 0)
+
+[node name="Tile4" parent="Line1" instance=ExtResource("1_8y4m8")]
+position = Vector2(600, 0)
+
+[node name="Tile5" parent="Line1" instance=ExtResource("1_8y4m8")]
+position = Vector2(800, 0)
+
+[node name="Line2" type="Node2D" parent="."]
+position = Vector2(0, 167)
+
+[node name="Tile" parent="Line2" instance=ExtResource("1_8y4m8")]
+
+[node name="Tile2" parent="Line2" instance=ExtResource("1_8y4m8")]
+position = Vector2(200, 0)
+
+[node name="Tile3" parent="Line2" instance=ExtResource("1_8y4m8")]
+position = Vector2(400, 0)
+
+[node name="Tile4" parent="Line2" instance=ExtResource("1_8y4m8")]
+position = Vector2(600, 0)
+
+[node name="Tile5" parent="Line2" instance=ExtResource("1_8y4m8")]
+position = Vector2(800, 0)
+
+[node name="Line3" type="Node2D" parent="."]
+position = Vector2(0, 334)
+
+[node name="Tile" parent="Line3" instance=ExtResource("1_8y4m8")]
+
+[node name="Tile2" parent="Line3" instance=ExtResource("1_8y4m8")]
+position = Vector2(200, 0)
+
+[node name="Tile3" parent="Line3" instance=ExtResource("1_8y4m8")]
+position = Vector2(400, 0)
+
+[node name="Tile4" parent="Line3" instance=ExtResource("1_8y4m8")]
+position = Vector2(600, 0)
+
+[node name="Tile5" parent="Line3" instance=ExtResource("1_8y4m8")]
+position = Vector2(800, 0)
+
+[node name="Line4" type="Node2D" parent="."]
+position = Vector2(0, 501)
+
+[node name="Tile" parent="Line4" instance=ExtResource("1_8y4m8")]
+
+[node name="Tile2" parent="Line4" instance=ExtResource("1_8y4m8")]
+position = Vector2(200, 0)
+
+[node name="Tile3" parent="Line4" instance=ExtResource("1_8y4m8")]
+position = Vector2(400, 0)
+
+[node name="Tile4" parent="Line4" instance=ExtResource("1_8y4m8")]
+position = Vector2(600, 0)
+
+[node name="Tile5" parent="Line4" instance=ExtResource("1_8y4m8")]
+position = Vector2(800, 0)
+
+[node name="Line5" type="Node2D" parent="."]
+position = Vector2(0, 668)
+
+[node name="Tile" parent="Line5" instance=ExtResource("1_8y4m8")]
+
+[node name="Tile2" parent="Line5" instance=ExtResource("1_8y4m8")]
+position = Vector2(200, 0)
+
+[node name="Tile3" parent="Line5" instance=ExtResource("1_8y4m8")]
+position = Vector2(400, 0)
+
+[node name="Tile4" parent="Line5" instance=ExtResource("1_8y4m8")]
+position = Vector2(600, 0)
+
+[node name="Tile5" parent="Line5" instance=ExtResource("1_8y4m8")]
+position = Vector2(800, 0)
+
+[node name="Line6" type="Node2D" parent="."]
+position = Vector2(0, 835)
+
+[node name="Tile" parent="Line6" instance=ExtResource("1_8y4m8")]
+
+[node name="Tile2" parent="Line6" instance=ExtResource("1_8y4m8")]
+position = Vector2(200, 0)
+
+[node name="Tile3" parent="Line6" instance=ExtResource("1_8y4m8")]
+position = Vector2(400, 0)
+
+[node name="Tile4" parent="Line6" instance=ExtResource("1_8y4m8")]
+position = Vector2(600, 0)
+
+[node name="Tile5" parent="Line6" instance=ExtResource("1_8y4m8")]
+position = Vector2(800, 0)
+
+[node name="Line7" type="Node2D" parent="."]
+
+[node name="letterBox" parent="Line7" instance=ExtResource("3_7yuvy")]
+position = Vector2(1000, 0)
+
+[node name="letterBox2" parent="Line7" instance=ExtResource("3_7yuvy")]
+position = Vector2(1200, 0)
+
+[node name="letterBox3" parent="Line7" instance=ExtResource("3_7yuvy")]
+position = Vector2(1400, 0)
+
+[node name="letterBox4" parent="Line7" instance=ExtResource("3_7yuvy")]
+position = Vector2(1600, 0)
+
+[node name="letterBox5" parent="Line7" instance=ExtResource("3_7yuvy")]
+position = Vector2(1800, 0)
+
+[node name="Line8" type="Node2D" parent="."]
+position = Vector2(0, 167)
+
+[node name="letterBox" parent="Line8" instance=ExtResource("3_7yuvy")]
+position = Vector2(1000, 0)
+
+[node name="letterBox2" parent="Line8" instance=ExtResource("3_7yuvy")]
+position = Vector2(1200, 0)
+
+[node name="letterBox3" parent="Line8" instance=ExtResource("3_7yuvy")]
+position = Vector2(1400, 0)
+
+[node name="letterBox4" parent="Line8" instance=ExtResource("3_7yuvy")]
+position = Vector2(1600, 0)
+
+[node name="letterBox5" parent="Line8" instance=ExtResource("3_7yuvy")]
+position = Vector2(1800, 0)
+
+[node name="Line9" type="Node2D" parent="."]
+position = Vector2(0, 334)
+
+[node name="letterBox" parent="Line9" instance=ExtResource("3_7yuvy")]
+position = Vector2(1000, 0)
+
+[node name="letterBox2" parent="Line9" instance=ExtResource("3_7yuvy")]
+position = Vector2(1200, 0)
+
+[node name="letterBox3" parent="Line9" instance=ExtResource("3_7yuvy")]
+position = Vector2(1400, 0)
+
+[node name="letterBox4" parent="Line9" instance=ExtResource("3_7yuvy")]
+position = Vector2(1600, 0)
+
+[node name="letterBox5" parent="Line9" instance=ExtResource("3_7yuvy")]
+position = Vector2(1800, 0)
+
+[node name="Line10" type="Node2D" parent="."]
+position = Vector2(0, 501)
+
+[node name="letterBox" parent="Line10" instance=ExtResource("3_7yuvy")]
+position = Vector2(1000, 0)
+
+[node name="letterBox2" parent="Line10" instance=ExtResource("3_7yuvy")]
+position = Vector2(1200, 0)
+
+[node name="letterBox3" parent="Line10" instance=ExtResource("3_7yuvy")]
+position = Vector2(1400, 0)
+
+[node name="letterBox4" parent="Line10" instance=ExtResource("3_7yuvy")]
+position = Vector2(1600, 0)
+
+[node name="letterBox5" parent="Line10" instance=ExtResource("3_7yuvy")]
+position = Vector2(1800, 0)
+
+[node name="Line11" type="Node2D" parent="."]
+position = Vector2(0, 668)
+
+[node name="letterBox" parent="Line11" instance=ExtResource("3_7yuvy")]
+position = Vector2(1000, 0)
+
+[node name="letterBox2" parent="Line11" instance=ExtResource("3_7yuvy")]
+position = Vector2(1200, 0)
+
+[node name="letterBox3" parent="Line11" instance=ExtResource("3_7yuvy")]
+position = Vector2(1400, 0)
+
+[node name="letterBox4" parent="Line11" instance=ExtResource("3_7yuvy")]
+position = Vector2(1600, 0)
+
+[node name="letterBox5" parent="Line11" instance=ExtResource("3_7yuvy")]
+position = Vector2(1800, 0)
+
+[node name="Line12" type="Node2D" parent="."]
+position = Vector2(0, 835)
+
+[node name="letterBox" parent="Line12" instance=ExtResource("3_7yuvy")]
+position = Vector2(1400, 0)
+
+[node name="labelTextBoxes" type="Node2D" parent="."]
+position = Vector2(100, 1025)
+
+[node name="Game" type="RichTextLabel" parent="labelTextBoxes"]
+offset_right = 771.0
+offset_bottom = 161.0
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+
+[node name="Options" type="RichTextLabel" parent="labelTextBoxes"]
+offset_left = 1050.0
+offset_right = 1821.0
+offset_bottom = 161.0
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+
+[node name="spacing" type="Node2D" parent="."]
+
+[node name="blank2" type="ColorRect" parent="spacing"]
+offset_left = 1605.0
+offset_top = 837.0
+offset_right = 2008.0
+offset_bottom = 998.0
+color = Color(0.192157, 0.231373, 0.266667, 1)
+
+[node name="blank1" type="ColorRect" parent="spacing"]
+offset_left = 996.0
+offset_top = 836.0
+offset_right = 1399.0
+offset_bottom = 997.0
+color = Color(0.192157, 0.227451, 0.266667, 1)
+
+[node name="seperator" type="ColorRect" parent="spacing"]
+offset_left = 984.0
+offset_top = -13.0
+offset_right = 1014.0
+offset_bottom = 1001.0
+color = Color(1, 0.428287, 0.637507, 1)
+
+[node name="seperator2" type="ColorRect" parent="spacing"]
+offset_left = 1015.0
+offset_top = 834.0
+offset_right = 2012.0
+offset_bottom = 838.0
+
+[node name="alert" type="RichTextLabel" parent="."]
+visible = false
+modulate = Color(0.926299, 2.4306e-06, 1.92523e-06, 1)
+top_level = true
+offset_left = 134.0
+offset_top = 156.0
+offset_right = 822.0
+offset_bottom = 665.0
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+
+[node name="giveUp" type="Button" parent="."]
+visible = false
+offset_left = 858.0
+offset_top = 1063.0
+offset_right = 1138.0
+offset_bottom = 1140.0
+theme_override_font_sizes/font_size = 50
+text = "Give up?"
+
+[node name="winorlose" type="Node2D" parent="."]
+position = Vector2(1022, 578)
+
+[node name="board" type="ColorRect" parent="winorlose"]
+visible = false
+offset_left = -1033.0
+offset_top = -393.0
+offset_right = 993.0
+offset_bottom = 233.0
+color = Color(0.429416, 0.429416, 0.429416, 1)
+
+[node name="textBox" type="RichTextLabel" parent="winorlose"]
+visible = false
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+offset_left = -987.0
+offset_top = -321.0
+offset_right = 975.0
+offset_bottom = -15.0
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+text = "YOU WIN!!"
+
+[node name="playAgain" type="Button" parent="winorlose"]
+visible = false
+offset_left = -296.0
+offset_right = -16.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 50
+text = "Play Again?"
+
+[node name="dontPlayAgain" type="Button" parent="winorlose"]
+visible = false
+offset_right = 280.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 50
+text = "Quit?"
+
+[node name="instruct" type="Button" parent="winorlose"]
+visible = false
+offset_left = -211.0
+offset_top = 112.0
+offset_right = 206.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 50
+text = "See instructions?"
+
+[node name="winMusic" type="AudioStreamPlayer2D" parent="winorlose"]
+stream = ExtResource("4_drlyd")
+volume_db = 2.667
+
+[node name="loseMusic" type="AudioStreamPlayer2D" parent="winorlose"]
+stream = ExtResource("5_dijkp")
+volume_db = 2.667
+
+[node name="backgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_4w5ob")
+volume_db = 2.667
+
+[node name="badResponse" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_2ft0r")
+pitch_scale = 2.7
+
+[connection signal="button_up" from="giveUp" to="." method="_on_give_up_button_up"]
+[connection signal="button_up" from="winorlose/playAgain" to="." method="_on_play_again_button_up"]
+[connection signal="button_down" from="winorlose/dontPlayAgain" to="." method="_on_dont_play_again_button_down"]
+[connection signal="button_down" from="winorlose/instruct" to="." method="_on_instruct_button_down"]
